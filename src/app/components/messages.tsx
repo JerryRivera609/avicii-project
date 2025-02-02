@@ -1,5 +1,5 @@
 export default function messages(){
     return(
-        <h2>messages</h2>
+        <h2>messagges</h2>
     );
 };

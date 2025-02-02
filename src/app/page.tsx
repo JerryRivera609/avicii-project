@@ -1,3 +1,4 @@
+
 import HomeComponent from '@/app/components/home'
 import About from '@/app/components/about'
 import Albums from '@/app/components/albums'
