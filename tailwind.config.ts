@@ -12,9 +12,6 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontFamily: {
-        mrbedfort: ["Hurricane", "serif"], // Agrega la fuente aquí
-      },
     },
   },
   plugins: [],
