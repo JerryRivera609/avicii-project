@@ -13,12 +13,12 @@ export default function header(){
             </div>
             <div>
                 <nav>
-                    <ul className="flex items-center gap-10 text-[1.2rem]">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Albums</a></li>
-                        <li><a href="">Music</a></li>
-                        <li><a href="">Messages</a></li>
+                    <ul className="flex items-center gap-10 text-[1.2rem] transition-all duration-500">
+                        <li><a className="hover:text-[#aaaaaa] transition-all duration-500" href="">Home</a></li>
+                        <li><a className="hover:text-[#aaaaaa] transition-all duration-500" href="">About</a></li>
+                        <li><a className="hover:text-[#aaaaaa] transition-all duration-500" href="">Albums</a></li>
+                        <li><a className="hover:text-[#aaaaaa] transition-all duration-500" href="">Music</a></li>
+                        <li><a className="hover:text-[#aaaaaa] transition-all duration-500" href="">Messages</a></li>
                     </ul>
                 </nav>
             </div>
