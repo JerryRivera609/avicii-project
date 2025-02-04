@@ -43,6 +43,8 @@ return (
             <section className="timeline-item">🔥 2011 - "Levels" lo hace famoso</section>
             <section className="timeline-item">🎤 2013 - "Wake Me Up" rompe récords</section>
             <section className="timeline-item">💿 2019 - Álbum póstumo "TIM"</section>
+            <section className="timeline-item">💿 2019 - Álbum póstumo "TIM"</section>
+            <section className="timeline-item">💿 2019 - Álbum póstumo "TIM"</section>
         </div>
     </div>
     );
