@@ -19,5 +19,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Arizonia", Arial, Helvetica, sans-serif;
+  font-family: Arial, "Arizonia", Helvetica, sans-serif;
 }
