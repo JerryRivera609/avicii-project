@@ -7,7 +7,7 @@ const apple = '/apple.png'
 export default function header(){
 
     return(
-        <header className="p-5 flex items-center justify-around">
+        <header className="p-5 flex items-center justify-around bg-black">
             <div>
                 <img src={logo} className="w-20 h-auto"  alt="" />
             </div>

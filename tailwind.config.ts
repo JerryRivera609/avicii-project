@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        arizonia: ["Arizonia", "cursive"],
+        roboto: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],
