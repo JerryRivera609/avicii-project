@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./about.css";
+const logoLight = '/timeline.png'
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +38,17 @@ useEffect(() => {
     return (
         <div className="timeline-container" ref={containerRef}>
             <div className="timeline-sections" ref={sectionsRef}>
+            <section className="timeline-item flex flex-col"
+            style={{ backgroundImage: `url(${logoLight})` }}
+            >
+                <div>
+                    <h2 className="font-arizonia text-[8rem] leading-[7rem] mb-10">Remember Tim <br /> Berling</h2>
+                    <div className="flex flex-col justify-center text-center">
+                        <p className="font-sans mt-5" >- LIVE A LIFE YOU WILL REMEMBER -</p>
+                        <p className="text-[1rem] tracking-[0.5rem]"> 1989 - 2018</p>
+                    </div>
+                </div>
+            </section>
                 <section className="timeline-item">🎧 1989 - Nacimiento en Estocolmo</section>
                 <section className="timeline-item">🔥 2011 - "Levels" lo hace famoso</section>
                 <section className="timeline-item">🎤 2013 - "Wake Me Up" rompe récords</section>
