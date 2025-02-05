@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         arizonia: ["Arizonia", "cursive"],
         roboto: ["Roboto", "sans-serif"],
+        lato: ["Lato"]
       },
     },
   },

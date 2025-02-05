@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./about.css";
-const logoLight = '/timeline.png'
+const timeline = '/timeline.png'
+const timelinea01 = '/timeline01.jpg'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -39,7 +40,7 @@ useEffect(() => {
         <div className="timeline-container" ref={containerRef}>
             <div className="timeline-sections" ref={sectionsRef}>
             <section className="timeline-item flex flex-col"
-            style={{ backgroundImage: `url(${logoLight})` }}
+            style={{ backgroundImage: `url(${timeline})` }}
             >
                 <div>
                     <h2 className="font-arizonia text-[8rem] leading-[7rem] mb-10">Remember Tim <br /> Berling</h2>
@@ -49,7 +50,16 @@ useEffect(() => {
                     </div>
                 </div>
             </section>
-                <section className="timeline-item">🎧 1989 - Nacimiento en Estocolmo</section>
+                <section className="timeline-item flex flex-col"
+                style={{ backgroundImage: `url(${timelinea01})` }}
+                >
+                    <div className="justify-end items-start">
+                        <h2 className="font-lato text-[3rem]">TIM BERLING</h2>
+                        <p>08 de septiembre de 1989</p>
+                        <p>Estocolmo - Suecia</p>
+                        <p>Desde joven, mostró una fuerte pasión por la música y la creatividad. Inspirado por artistas como Daft Punk y Swedish House Mafia, comenzó a experimentar con la producción musical desde su adolescencia.</p>
+                    </div>
+                </section>
                 <section className="timeline-item">🔥 2011 - "Levels" lo hace famoso</section>
                 <section className="timeline-item">🎤 2013 - "Wake Me Up" rompe récords</section>
                 <section className="timeline-item">💿 2019 - Álbum póstumo "TIM"</section>
