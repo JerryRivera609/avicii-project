@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./about.css";
 
 const timeline = './timeline.png'
+const timeline01 = './timeline01.jpg'
+const timeline02 = './timeline02.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,22 +41,30 @@ useEffect(() => {
     return (
         <div className="timeline-container" ref={containerRef}>
             <div className="timeline-sections" ref={sectionsRef}>
-                <section className="min-w-[80vw] h-[100vh] p-5 bg-[#05051b] rounded-xl flex justify-around items-center">
+                <section className="min-w-[80vw] h-[95vh] p-5 bg-[#05051b] rounded-[25px] flex justify-around items-center text-center">
                     <div>
-                        <img src={timeline} alt="" />
+                        <img src={timeline} className="rounded-xl" alt="" />
                     </div>
                         <div>
                         <h2 className="font-arizonia text-[8rem] leading-[7rem] mb-10">Remember Tim <br /> Berling</h2>
                         <div className="flex flex-col justify-center text-center">
-                            <p className="font-sans mt-5" >- LIVE A LIFE YOU WILL REMEMBER -</p>
-                            <p className="text-[1rem] tracking-[0.5rem]"> 1989 - 2018</p>
+                            <p className="font-sans mt-5 text-[1.5rem]" >- LIVE A LIFE YOU WILL REMEMBER -</p>
+                            <p className="text-[1.2rem] tracking-[0.5rem]"> 1989 - 2018</p>
                         </div>
                     </div>
                 </section>
-                <section className="min-w-[80vw] h-[100vh] p-5">🎧 1989 - Nacimiento en Estocolmo</section>
-                <section className="min-w-[80vw] h-[100vh] p-5">🔥 2011 - "Levels" lo hace famoso</section>
-                <section className="min-w-[80vw] h-[100vh] p-5">🎤 2013 - "Wake Me Up" rompe récords</section>
-                <section className="min-w-[80vw] h-[100vh] p-5">💿 2019 - Álbum póstumo "TIM"</section>
+                <section className="min-w-[80vw] h-[95vh] p-10 bg-[#222831] rounded-[25px] flex">
+                    <div className="space-y-5">
+                        <img src={timeline02} className="w-[300px] h-auto rounded-xl" alt="" />
+                        <img src={timeline01} className="w-[300px] h-auto rounded-xl" alt="" />
+                    </div>
+                    <div>
+                        <h2>Tim Berling - 1989</h2>
+                    </div>
+                </section>
+                <section className="min-w-[80vw] h-[95vh] p-5">🔥 2011 - "Levels" lo hace famoso</section>
+                <section className="min-w-[80vw] h-[95vh] p-5">🎤 2013 - "Wake Me Up" rompe récords</section>
+                <section className="min-w-[80vw] h-[95vh] p-5">💿 2019 - Álbum póstumo "TIM"</section>
             </div>
         </div>
     );
