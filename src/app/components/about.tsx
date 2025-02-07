@@ -5,6 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./about.css";
 
+
+
 const timeline = './tim.jpg'
 const timeline01 = './timeline01.jpg'
 const timeline02 = './timeline02.jpg'
@@ -12,16 +14,32 @@ const timeline03 = './timeline03.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Timeline = () => {
-const containerRef = useRef<HTMLDivElement>(null);
-const sectionsRef = useRef<HTMLDivElement>(null);
+const About = () => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const sectionsRef = useRef<HTMLDivElement>(null);
+    const sectionRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        if (sectionRef.current) {
+            gsap.from(sectionRef.current, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 80%", 
+                    toggleActions: "play none none none",
+                },
+            });
+        }
+    }, []);
+    
 useEffect(() => {
     const container = containerRef.current;
     const sections = sectionsRef.current;
 
     if (container && sections) {
-      // Reseteamos el scroll al principio
         window.scrollTo({ top: 0, behavior: "smooth" });
 
         gsap.to(sections, {
@@ -55,7 +73,7 @@ useEffect(() => {
                         </div>
                     </div>
                 </section>
-                <section className="min-w-[80vw] h-[95vh] p-10 bg-[#222831] rounded-[25px] items-center justify-center flex flex-col-reverse gap-4">
+                <section ref={sectionRef} className="min-w-[80vw] h-[95vh] p-10 bg-[#222831] rounded-[25px] items-center justify-center flex flex-col-reverse gap-4">
                     <div className="gap-10 flex justify-center">
                         <img src={timeline02} className="w-[30%] h-auto rounded-xl" alt="" />
                         <img src={timeline01} className="w-[30%] h-auto rounded-xl" alt="" />
@@ -79,4 +97,4 @@ useEffect(() => {
     );
 };
 
-export default Timeline;
+export default About;
