@@ -17,24 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const sectionsRef = useRef<HTMLDivElement>(null);
-    const sectionRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        if (sectionRef.current) {
-            gsap.from(sectionRef.current, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 80%", 
-                    toggleActions: "play none none none",
-                },
-            });
-        }
-    }, []);
-    
 useEffect(() => {
     const container = containerRef.current;
     const sections = sectionsRef.current;
@@ -73,7 +56,7 @@ useEffect(() => {
                         </div>
                     </div>
                 </section>
-                <section ref={sectionRef} className="min-w-[80vw] h-[95vh] p-10 bg-[#222831] rounded-[25px] items-center justify-center flex flex-col-reverse gap-4">
+                <section className="min-w-[80vw] h-[95vh] p-10 bg-[#222831] rounded-[25px] items-center justify-center flex flex-col-reverse gap-4">
                     <div className="gap-10 flex justify-center">
                         <img src={timeline02} className="w-[30%] h-auto rounded-xl" alt="" />
                         <img src={timeline01} className="w-[30%] h-auto rounded-xl" alt="" />
