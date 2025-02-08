@@ -1,25 +1,54 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState} from "react";
+import { Play, Pause } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./about.css";
 
-
+const songs = [
+    {
+        title: "Levels - Radio Edit",
+        artist: "Avicii",
+        image: "./timeline05.jpg",
+        audio: "/songs/Avicii-Levels.mp3",
+    },
+    {
+        title: "Seek Bromance - Avicii Vocal Edit",
+        artist: "Tim Berg, Avicii",
+        image: "./timeline06.webp",
+        audio: "/songs/TimBerg-seekBromance.mp3",
+    },
+];
 
 const timeline = './tim.jpg'
 const timeline01 = './timeline01.jpg'
 const timeline02 = './timeline02.jpg'
 const timeline03 = './timeline03.jpg'
 const timeline04 = './timeline04.jpg'
-const timeline05 = './timeline05.jpg'
-const timeline06 = './timeline06.webp'
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const sectionsRef = useRef<HTMLDivElement>(null);
+
+    const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+    const audioRefs = useRef<HTMLAudioElement[]>([]);
+
+    const handlePlayPause = (index: number) => {
+        if (playingIndex === index) {
+            audioRefs.current[index]?.pause();
+            setPlayingIndex(null);
+        } else {
+            audioRefs.current.forEach((audio, i) => {
+                if (i !== index) audio?.pause();
+            });
+            audioRefs.current[index]?.play();
+            setPlayingIndex(index);
+        }
+    };
+    
 
 useEffect(() => {
     const container = containerRef.current;
@@ -80,17 +109,34 @@ useEffect(() => {
                             <p className="font-lato text-center mb-3 text-[1.2rem]">In 2011, Avicii established himself as one of the biggest promises in electronic music. His track 'Levels' revolutionized the industry and became an EDM anthem. That same year, his performance at Tomorrowland left a lasting mark, marking the beginning of a golden era in his career.</p>
                         </div>
                         <div className="flex gap-5 justify-around items-start">
-                            <div className="flex flex-col p-5 rounded-xl w-[35%] transition-all duration-300 hover:bg-[#323232] text-center">
-                                <img src={timeline05} width={200} className="rounded-xl" alt="" />
-                                <h3 className="text-[1.5rem] font-bold font-sans">Levels - Radio Edit</h3>
-                                <p className="text-[#ffffff]"><span className="text-[#b1b1b1]">Song -</span> Avicii</p>
+                            {songs.map((song, index) => (
+                                <div
+                                    key={index}
+                                    className="relative flex flex-col p-5 rounded-xl w-[35%] transition-all duration-300 hover:bg-[#323232] text-center group"
+                                >
+                                {/* Imagen con overlay */}
+                                <div className="relative">
+                                    <img src={song.image} className="rounded-xl w-full" alt={song.title} />
+                                    {/* Botón de reproducción en hover */}
+                                    <button
+                                    onClick={() => handlePlayPause(index)}
+                                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 rounded-xl"
+                                    >
+                                    {playingIndex === index ? <Pause size={50} color="#1DB954" /> : <Play size={50} color="#1DB954" />}
+                                    </button>
+                                </div>
+
+                                {/* Información */}
+                                <h3 className="text-[1.5rem] font-bold font-sans">{song.title}</h3>
+                                <p className="text-[#ffffff]">
+                                    <span className="text-[#b1b1b1]">Song -</span> {song.artist}
+                                </p>
+
+                                {/* Elemento de audio oculto */}
+                                <audio ref={(el) => (audioRefs.current[index] = el!)} src={song.audio} />
+                                </div>
+                            ))}
                             </div>
-                            <div className="flex flex-col p-5 rounded-xl w-[35%] transition-all duration-300 hover:bg-[#323232] text-center">
-                                <img src={timeline06} width={200} className="rounded-xl" alt="" />
-                                <h3 className="text-[1.5rem] font-bold font-sans">Seek Bromance - Avicii Vocal Edit</h3>
-                                <p className="text-[#ffffff]"><span className="text-[#b1b1b1]">Song -</span> Tim Berg, Avicii</p>
-                            </div>
-                        </div>
                     </div>
                     <div></div>
                 </section>
