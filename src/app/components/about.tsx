@@ -56,7 +56,7 @@ useEffect(() => {
                         </div>
                     </div>
                 </section>
-                <section className="min-w-[80vw] h-[95vh] p-10 bg-[#222831] rounded-[25px] items-center justify-center flex flex-col-reverse gap-4">
+                <section className="min-w-[80vw] h-[95vh] p-10 bg-[#0f0f0f] rounded-[25px] items-center justify-center flex flex-col-reverse gap-4">
                     <div className="gap-10 flex justify-center">
                         <img src={timeline02} className="w-[30%] h-auto rounded-xl" alt="" />
                         <img src={timeline01} className="w-[30%] h-auto rounded-xl" alt="" />
@@ -69,7 +69,7 @@ useEffect(() => {
                 </section>
                 <section className="min-w-[80vw] h-[95vh] p-5 bg-[#222222]">
                     <div>
-                        <h2>Tim - 2011 - Levels</h2>
+                        <h2 className="font-arizonia">Tim - 2011 - Levels</h2>
                     </div>
                     <div></div>
                 </section>
