@@ -11,6 +11,9 @@ const timeline = './tim.jpg'
 const timeline01 = './timeline01.jpg'
 const timeline02 = './timeline02.jpg'
 const timeline03 = './timeline03.jpg'
+const timeline04 = './timeline04.jpg'
+const timeline05 = './timeline05.jpg'
+const timeline06 = './timeline06.webp'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,9 +70,23 @@ useEffect(() => {
                         <p className="font-lato text-[1.5rem]">Tim Bergling was born on September 8, 1989, in Stockholm, Sweden. From a young age, he showed a strong passion for music and creativity. Inspired by artists like Daft Punk and Swedish House Mafia, he began experimenting with music production during his teenage years.</p>
                     </div>
                 </section>
-                <section className="min-w-[80vw] h-[95vh] p-5 bg-[#222222]">
-                    <div>
-                        <h2 className="font-arizonia">Tim - 2011 - Levels</h2>
+                <section className="min-w-[80vw] h-[95vh] p-10 bg-[#2f2b1d] rounded-xl flex justify-center items-center gap-5">
+                    <div className="w-1/3">
+                        <img src={timeline04} className="rounded-xl w-[800px]" alt="" />
+                    </div>
+                    <div className="flex flex-col w-2/3 justify-center items-center">
+                        <div>
+                            <h2 className="font-arizonia text-[5rem] text-center">Tim - 2011</h2>
+                            <p className="font-lato text-center mb-5 text-[1.2rem]">In 2011, Avicii established himself as one of the biggest promises in electronic music. His track 'Levels' revolutionized the industry and became an EDM anthem. That same year, his performance at Tomorrowland left a lasting mark, marking the beginning of a golden era in his career.</p>
+                        </div>
+                        <div className="flex gap-5 justify-around items-end">
+                            <div className="flex flex-col p-5 rounded-xl w-[40%] transition-all duration-300 hover:bg-[#323232]">
+                                <img src={timeline05} className=" h-auto rounded-xl" alt="" />
+                            </div>
+                            <div className="flex flex-col p-5 rounded-xl w-[40%] transition-all duration-300 hover:bg-[#323232]">
+                                <img src={timeline06} className="h-auto rounded-xl" alt="" />
+                            </div>
+                        </div>
                     </div>
                     <div></div>
                 </section>
