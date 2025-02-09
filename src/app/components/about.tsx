@@ -146,31 +146,44 @@ useEffect(() => {
                     <div className="w-1/2 flex flex-col items-center justify-center h-full">
                         <div>
                             {/* SECCTION OF SONG*/}
-                            <div className="flex p-5 gap-5 bg-black rounded-xl">
+                            <div className="flex p-5 gap-5  bg-gradient-to-b from-[#757575] to-[#464646] rounded-t-xl">
                                 <div>
                                     <img src={trueAlbum} width={180} alt="" />
                                 </div>
-                                <div className="flex flex-col justify-end text-white">
+                                <div className="flex flex-col justify-end text-white font-roboto">
                                     <div>
                                         <p className="text-[1.2rem]">Song</p>
                                     </div>
                                     <div>
-                                        <h3 className="text-[3rem]">Wake Me Up</h3>
+                                        <h3 className="text-[3rem] font-bold">Wake Me Up</h3>
                                     </div>
-                                    <div>
-                                        <p className="flex">
+                                    <div className="flex gap-3">
+                                        <p className="flex gap-1 justify-center items-center">
                                             <img src={timPerfil} width={30} className="rounded-full" alt="" />
-                                            <a href="">Avicii</a>
+                                            <a href="" className="font-bold">Avicii</a>
                                             •
-                                            <a href="">True</a>
+                                            <a href="" className="font-bold">True</a>
                                             • 2013 • 4:07 • 2.605.213.176
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             {/* SECCTION PLAY AND ARTIST*/}
-                            <div>
-
+                            <div className="bg-gradient-to-b from-[#3f3f3f] to-[#292929] rounded-b-xl p-5">
+                                <div className="flex p-5 gap-5">
+                                    <a href="" type="button"> reproducir</a>
+                                    <p> + </p>
+                                    <p> ••• </p>
+                                </div>
+                                <div className="flex gap-3 p-2 transition-all duration-300 hover:bg-[#5d5d5da0] rounded-xl">
+                                    <div>
+                                        <img src={timPerfil} width={80} className="rounded-full" alt="" />
+                                    </div>
+                                    <div className="flex flex-col font-roboto text-[1.2rem] font-bold justify-center items-center">
+                                        <p>Artist</p>
+                                        <a href="https://open.spotify.com/intl-es/artist/1vCWHaC5f2uS3yhpwWbIA6" className="hover:underline" target="_blank">Avicii</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
