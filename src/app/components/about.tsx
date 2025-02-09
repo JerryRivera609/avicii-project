@@ -27,6 +27,9 @@ const timeline02 = './timeline02.jpg'
 const timeline03 = './timeline03.jpg'
 const timeline04 = './timeline04.jpg'
 
+const timPerfil = './tim-perfil.jpg'
+const trueAlbum = './true-album.png'
+
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -134,14 +137,42 @@ useEffect(() => {
                     </div>
                     <div></div>
                 </section>
-                <section className="min-w-[80vw] h-[95vh] p-7 bg-[url('/section3.png')] bg-cover bg-center rounded-[25px]">
+                <section className="min-w-[80vw] h-[95vh] p-7 bg-[url('/section3.png')] bg-cover flex bg-center rounded-[25px]">
                     <div className="w-1/2 flex flex-col items-center justify-center h-full">
                         <h2 className="font-arizonia text-[5rem]">Tim - 2013</h2>
                         <p className="text-[1.2rem]">2013 was a pivotal year in Avicii's career. With the release of <span className="font-bold">Wake Me Up</span>, he fused electronic music with folk, creating an innovative sound that broke barriers. The song became a global hit, topping charts in over 20 countries and redefining EDM. Additionally, his album True showcased his musical versatility, cementing him as one of the most influential artists of the decade.</p>
                         <p className="text-[1.5rem]">◢◤</p>
                     </div>
-                    <div className="w-1/2">
-                        
+                    <div className="w-1/2 flex flex-col items-center justify-center h-full">
+                        <div>
+                            {/* SECCTION OF SONG*/}
+                            <div className="flex p-5 gap-5 bg-black rounded-xl">
+                                <div>
+                                    <img src={trueAlbum} width={180} alt="" />
+                                </div>
+                                <div className="flex flex-col justify-end text-white">
+                                    <div>
+                                        <p className="text-[1.2rem]">Song</p>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-[3rem]">Wake Me Up</h3>
+                                    </div>
+                                    <div>
+                                        <p className="flex">
+                                            <img src={timPerfil} width={30} className="rounded-full" alt="" />
+                                            <a href="">Avicii</a>
+                                            •
+                                            <a href="">True</a>
+                                            • 2013 • 4:07 • 2.605.213.176
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* SECCTION PLAY AND ARTIST*/}
+                            <div>
+
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section className="min-w-[80vw] h-[95vh] p-5">💿 2019 - Álbum póstumo "TIM"</section>
