@@ -19,7 +19,10 @@ const songs = [
         image: "./timeline06.webp",
         audio: "/songs/TimBerg-seekBromance.mp3",
     },
+
 ];
+
+const wakeMeUp = "/songs/Avicii-WakeMeUp.mp3"
 
 const timeline = './tim.jpg'
 const timeline01 = './timeline01.jpg'
@@ -159,31 +162,44 @@ useEffect(() => {
                                     </div>
                                     <div className="flex gap-3">
                                         <p className="flex gap-1 justify-center items-center">
-                                            <img src={timPerfil} width={30} className="rounded-full" alt="" />
-                                            <a href="" className="font-bold">Avicii</a>
+                                            <img src={timPerfil} width={20} className="rounded-full" alt="" />
+                                            <a href="https://open.spotify.com/intl-es/artist/1vCWHaC5f2uS3yhpwWbIA6" className="font-bold hover:underline">Avicii</a>
                                             •
-                                            <a href="" className="font-bold">True</a>
+                                            <a href="https://open.spotify.com/intl-es/album/2H6i2CrWgXE1HookLu8Au0" className="font-bold hover:underline">True</a>
                                             • 2013 • 4:07 • 2.605.213.176
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             {/* SECCTION PLAY AND ARTIST*/}
-                            <div className="bg-gradient-to-b from-[#3f3f3f] to-[#292929] rounded-b-xl p-5">
-                                <div className="flex p-5 gap-5">
-                                    <a href="" type="button"> reproducir</a>
-                                    <p> + </p>
-                                    <p> ••• </p>
+                            <div className="bg-gradient-to-b from-[#373737] to-[#1f1f1f] rounded-b-xl p-5">
+                                {/* Botón de Play/Pause */}
+                                <div className="flex p-5 gap-5 items-center">
+                                        <button 
+                                            onClick={() => handlePlayPause(songs.length)} 
+                                            className="w-14 h-14 bg-[#1da54d] flex items-center justify-center rounded-full transition-all duration-300 hover:scale-105 hover:bg-[#21d25f]"
+                                        >
+                                            {playingIndex === songs.length ? <Pause size={30} /> : <Play size={30} />}                                        </button>
+                                    <p className="text-[2rem] text-[#7a7a7a] "> + </p>
+                                    <p className="text-[2rem] text-[#7a7a7a]"> ••• </p>
                                 </div>
+
+                                {/* Info del artista */}
                                 <div className="flex gap-3 p-2 transition-all duration-300 hover:bg-[#5d5d5da0] rounded-xl">
                                     <div>
-                                        <img src={timPerfil} width={80} className="rounded-full" alt="" />
+                                        <img src={timPerfil} width={80} className="rounded-full" alt="Avicii" />
                                     </div>
                                     <div className="flex flex-col font-roboto text-[1.2rem] font-bold justify-center items-center">
                                         <p>Artist</p>
-                                        <a href="https://open.spotify.com/intl-es/artist/1vCWHaC5f2uS3yhpwWbIA6" className="hover:underline" target="_blank">Avicii</a>
+                                        <a href="https://open.spotify.com/intl-es/artist/1vCWHaC5f2uS3yhpwWbIA6" 
+                                        className="hover:underline" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer">
+                                            Avicii
+                                        </a>
                                     </div>
                                 </div>
+                                <audio ref={(el) => (audioRefs.current[songs.length] = el!)} src={wakeMeUp} />
                             </div>
                         </div>
                     </div>
