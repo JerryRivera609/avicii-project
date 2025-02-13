@@ -140,7 +140,7 @@ useEffect(() => {
                     </div>
                     <div></div>
                 </section>
-                <section className="min-w-[80vw] h-[95vh] p-7 bg-[url('/section3.png')] bg-cover flex bg-center rounded-[25px]">
+                <section className="min-w-[80vw] h-[95vh] p-7 bg-[url('/section3.jpg')] bg-cover flex bg-center rounded-[25px]">
                     <div className="w-1/2 flex flex-col items-center justify-center h-full">
                         <h2 className="font-arizonia text-[5rem]">Tim - 2013</h2>
                         <p className="text-[1.2rem]">2013 was a pivotal year in Avicii's career. With the release of <span className="font-bold">Wake Me Up</span>, he fused electronic music with folk, creating an innovative sound that broke barriers. The song became a global hit, topping charts in over 20 countries and redefining EDM. Additionally, his album True showcased his musical versatility, cementing him as one of the most influential artists of the decade.</p>
@@ -164,7 +164,7 @@ useEffect(() => {
                                         <p className="flex gap-1 justify-center items-center">
                                             <img src={timPerfil} width={20} className="rounded-full" alt="" />
                                             <a href="https://open.spotify.com/intl-es/artist/1vCWHaC5f2uS3yhpwWbIA6" className="font-bold hover:underline">Avicii</a>
-                                            •
+                                            • 
                                             <a href="https://open.spotify.com/intl-es/album/2H6i2CrWgXE1HookLu8Au0" className="font-bold hover:underline">True</a>
                                             • 2013 • 4:07 • 2.605.213.176
                                         </p>
@@ -204,7 +204,15 @@ useEffect(() => {
                         </div>
                     </div>
                 </section>
-                <section className="min-w-[80vw] h-[95vh] p-5">💿 2019 - Álbum póstumo "TIM"</section>
+                <section className="min-w-[80vw] h-[95vh] p-7 bg-[url('/section4.png')] bg-cover flex bg-center rounded-[25px]">
+                    <h2 className="font-arizonia text-[5rem]">Tim - 2015</h2>
+                </section>
+                <section className="min-w-[80vw] h-[95vh] p-5 bg-[url('/section4.png')] bg-cover flex bg-center rounded-[25px]">
+                <h2>Tim - 2012</h2>
+                </section>
+                <section className="min-w-[80vw] h-[95vh] p-5 bg-[url('/section4.png')] bg-cover flex bg-center rounded-[25px]">
+                <h2>Tim - 20</h2>
+                </section>
             </div>
         </div>
     );
