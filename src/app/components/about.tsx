@@ -205,7 +205,13 @@ useEffect(() => {
                     </div>
                 </section>
                 <section className="min-w-[80vw] h-[95vh] p-7 bg-[url('/section4.png')] bg-cover flex bg-center rounded-[25px]">
-                    <h2 className="font-arizonia text-[5rem]">Tim - 2015</h2>
+                    <div>
+                        <h2 className="font-arizonia text-[5rem]">Tim - 2015</h2>
+                        <p>In 2015, Avicii released Stories, his second studio album, showcasing a more diverse and personal sound that blended EDM with pop, rock, and country influences. The album featured hit songs like Waiting for Love, The Nights, and Broken Arrows, collaborating with artists such as Chris Martin, Zac Brown Band, and Martin Garrix. Stories received critical acclaim for its innovation and emotional depth, further solidifying Avicii’s status as a pioneer in electronic music. However, during this period, he also faced serious health issues due to his relentless work schedule, leading him to announce his retirement from touring the following year.</p>
+                    </div>
+                    <div>
+                        
+                    </div>
                 </section>
                 <section className="min-w-[80vw] h-[95vh] p-5 bg-[url('/section4.png')] bg-cover flex bg-center rounded-[25px]">
                 <h2>Tim - 2012</h2>
