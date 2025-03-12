@@ -2,6 +2,7 @@ const lupa = "/lupa.png"
 const flecha = "/flechaDerecha.png"
 const perfil = "/tim-perfil2.jpg"
 const stories = "/stories.jpg"
+const descarga = "/descarga.png"
 
 export default function tim2015(){
 
@@ -30,7 +31,7 @@ export default function tim2015(){
                             <h2 className="text-3xl font-bold">Stories</h2>
                             <p className="text-xs text-[#b5b5b5]">Stories es el título del segundo álbum de estudio de disc jockey y productor sueco Avicii. Fue lanz<a href="" className="text-white">... Más</a></p> 
                         </div>
-                        <div>
+                        <div className="flex gap-2 m-4">
                             <a href=""><img src="" alt="download" /></a>
                             <a href=""><img src="" alt="add" /></a>
                             <a href=""><img src="" alt="play" /></a>
