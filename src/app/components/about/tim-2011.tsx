@@ -10,13 +10,13 @@ const songs = [
         title: "Levels - Radio Edit",
         artist: "Avicii",
         image: "./timeline05.jpg",
-        audio: "@/public/songs/Avicii-Levels.mp3",
+        audio: "/songs/Avicii-Levels.mp3",
     },
     {
         title: "Seek Bromance - Avicii Vocal Edit",
         artist: "Tim Berg, Avicii",
         image: "./timeline06.webp",
-        audio: "@/public/songs/TimBerg-seekBromance.mp3",
+        audio: "/songs/TimBerg-seekBromance.mp3",
     },
 
 ];

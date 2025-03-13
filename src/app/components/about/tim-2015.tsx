@@ -54,6 +54,21 @@ const listMusic = [
     
 ];
 
+const listaMusic = listMusic.map((music) => (
+    <a key={music.id} href="" className="flex gap-8 w-full justify-around items-center p-2 rounded-xl transition-all duration-500 hover:bg-stone-800">
+        <div>
+            <h4>{music.id}</h4>
+        </div>
+        <div className="text-start">
+            <h5 className="text-xs font-bold">{music.title}</h5>
+            <p className="text-xs text-[#b5b5b5]">{music.artist} • {music.duration} • {music.reproductions}</p>
+        </div>
+        <div>
+            <button type="button"><img src={more} className="w-5" alt="" /></button>
+        </div>
+    </a>
+));
+
 export default function tim2015(){
 
     
@@ -92,42 +107,10 @@ export default function tim2015(){
                                 <a href=""className="p-3 bg-stone-800 rounded-full"><img src={more} className="w-5  " alt="more" /></a>
                             </div>
                             <div>
-                                <a href="" className="flex gap-8 w-full justify-center items-center p-2 rounded-xl transition-all duration-500 hover:bg-stone-800">
-                                    <div>
-                                        <h4>1</h4>
-                                    </div>
-                                    <div className="text-start">
-                                        <h5 className="text-xs font-bold">Waiting For Love</h5>
-                                        <p className="text-xs text-[#b5b5b5]">Avicii • 3:51 • 1972 M reproducciones</p>
-                                    </div>
-                                    <div>
-                                        <button type="button"><img src={more} className="w-5" alt="" /></button>
-                                    </div>
-                                </a>
-                                <a href="" className="flex gap-8 w-full justify-center items-center p-2 rounded-xl transition-all duration-500 hover:bg-stone-800">
-                                    <div>
-                                        <h4>1</h4>
-                                    </div>
-                                    <div className="text-start">
-                                        <h5 className="text-xs font-bold">Waiting For Love</h5>
-                                        <p className="text-xs text-[#b5b5b5]">Avicii • 3:51 • 1972 M reproducciones</p>
-                                    </div>
-                                    <div>
-                                        <button type="button"><img src={more} className="w-5" alt="" /></button>
-                                    </div>
-                                </a>
-                                <a href="" className="flex gap-8 w-full justify-center items-center p-2 rounded-xl transition-all duration-500 hover:bg-stone-800">
-                                    <div>
-                                        <h4>1</h4>
-                                    </div>
-                                    <div className="text-start">
-                                        <h5 className="text-xs font-bold">Waiting For Love</h5>
-                                        <p className="text-xs text-[#b5b5b5]">Avicii • 3:51 • 1972 M reproducciones</p>
-                                    </div>
-                                    <div>
-                                        <button type="button"><img src={more} className="w-5" alt="" /></button>
-                                    </div>
-                                </a>
+                                {listaMusic}
+                            </div>
+                            <div>
+                                <p className="text-stone-500 p-5 text-xs">14 songs • 54 minutes </p>
                             </div>
                         </div>
                     </div>
