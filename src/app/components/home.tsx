@@ -8,8 +8,10 @@ export default function Home(){
             <div className="relative w-full h-screen">
                 {/* Imagen de fondo */}
                 <div>
-                    <img 
-                        src={imgHome} 
+                    <Image 
+                        src={imgHome}
+                        width={1920}
+                        height={1080}
                         className="absolute inset-0 w-full h-full object-cover" 
                         alt="" 
                     />
@@ -24,7 +26,7 @@ export default function Home(){
                         <h1 className="text-9xl font-Arizona pt-10">Tribute to Avicii</h1>
                         <h2 className="text-4xl font-sans mb-2 tracking-[0.5rem]">IN LOVING MEMORY</h2>
                         <h3 className="text-xl font-sans tracking-[0.4rem] mb-5">1989.09.08 – 2018.04.20</h3>
-                        <img src={avicii} className="h-20" alt="" />
+                        <Image src={avicii} width={100} height={20} className="h-20 w-auto" alt="" />
                     </div>
                 </div>
             </div>

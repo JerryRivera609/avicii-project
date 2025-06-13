@@ -1,12 +1,12 @@
-
-import { useEffect, useRef, useState} from "react";
+import Image from 'next/image';
+import { useRef, useState} from "react";
 import { Play, Pause } from "lucide-react";
 
 const songs = [
     {
         title: "Levels - Radio Edit",
         artist: "Avicii",
-        image: "./timeline05.jpg",
+        image: "/timeline05.jpg",
         audio: "@/public/songs/Avicii-Levels.mp3",
     },
     {
@@ -19,8 +19,8 @@ const songs = [
 ];
 
 const wakeMeUp = "/songs/Avicii-WakeMeUp.mp3"
-const timPerfil = './tim-perfil.jpg'
-const trueAlbum = './true-album.png'
+const timPerfil = '/tim-perfil.jpg'
+const trueAlbum = '/true-album.png'
 
 export default function tim2015(){
 
@@ -52,9 +52,9 @@ export default function tim2015(){
                 {/* SECCTION OF SONG*/}
                     <div className="flex p-5 gap-5  bg-gradient-to-b from-[#757575] to-[#464646] rounded-t-xl">
                         <div>
-                            <img src={trueAlbum} width={180} alt="" />
+                            <Image src={trueAlbum} width={200} height={20} alt="" />
                         </div>
-                        <div className="f   lex flex-col justify-end text-white font-roboto">
+                        <div className="flex flex-col justify-end text-white font-roboto">
                             <div>
                                 <p className="text-[1.2rem]">Song</p>
                             </div>
@@ -63,7 +63,7 @@ export default function tim2015(){
                             </div>
                             <div className="flex gap-3">
                                 <p className="flex gap-1 justify-center items-center">
-                                    <img src={timPerfil} width={20} className="rounded-full" alt="" />
+                                    <Image src={timPerfil} width={20} height={20} className="rounded-full" alt="" />
                                     <a href="https://open.spotify.com/intl-es/artist/1vCWHaC5f2uS3yhpwWbIA6" className="font-bold hover:underline">Avicii</a>
                                         • 
                                     <a href="https://open.spotify.com/intl-es/album/2H6i2CrWgXE1HookLu8Au0" className="font-bold hover:underline">True</a>
@@ -87,7 +87,7 @@ export default function tim2015(){
                             {/* Info del artista */}
                         <div className="flex gap-3 p-2 transition-all duration-300 hover:bg-[#5d5d5da0] rounded-xl">
                             <div>
-                                <img src={timPerfil} width={80} className="rounded-full" alt="Avicii" />
+                                <Image src={timPerfil} width={60} height={60} className="rounded-full" alt="Avicii" />
                             </div>
                             <div className="flex flex-col font-roboto text-[1.2rem] font-bold justify-center items-center">
                                 <p>Artist</p>

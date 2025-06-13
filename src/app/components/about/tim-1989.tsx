@@ -1,14 +1,16 @@
-const timeline01 = './timeline01.jpg'
-const timeline02 = './timeline02.jpg'
-const timeline03 = './timeline03.jpg'
+import Image from 'next/image';
+
+const timeline01 = '/timeline01.jpg'
+const timeline02 = '/timeline02.jpg'
+const timeline03 = '/timeline03.jpg'
 
 export default function tim1989 (){
     return(
         <section className="min-w-[80vw] h-[95vh] p-5 bg-[#bebebe] rounded-[25px] items-center justify-center flex flex-col-reverse gap-4">
             <div className="gap-10 flex justify-center">
-                <img src={timeline02} className="w-[30%] h-auto rounded-xl" alt="" />
-                <img src={timeline01} className="w-[30%] h-auto rounded-xl" alt="" />
-                <img src={timeline03} className="w-[30%] h-auto rounded-xl" alt="" />
+                <Image src={timeline02} width={400} height={100} className="w-[30%] h-auto rounded-xl" alt="" />
+                <Image src={timeline01} width={400} height={100} className="w-[30%] h-auto rounded-xl" alt="" />
+                <Image src={timeline03} width={400} height={100} className="w-[30%] h-auto rounded-xl" alt="" />
             </div>
             <div className="flex flex-col text-[1.2rem] p-5 justify-center items-center text-center">
                 <h2 className="font-arizonia text-[5rem] text-black">Tim - 1989</h2>

@@ -1,3 +1,6 @@
+import Image from 'next/image';
+
+
 const lupa = "/lupa.png"
 const flecha = "/flechaDerecha.png"
 const perfil = "/tim-perfil2.jpg"
@@ -55,7 +58,7 @@ const listMusic = [
 ];
 
 const listaMusic = listMusic.map((music) => (
-    <a key={music.id} href="" className="flex gap-8 w-full justify-around items-center p-2 rounded-xl transition-all duration-500 hover:bg-stone-800">
+    <a key={music.id} className="flex gap-8 w-full justify-around items-center p-2 rounded-xl transition-all duration-500 hover:bg-stone-800">
         <div>
             <h4>{music.id}</h4>
         </div>
@@ -64,7 +67,7 @@ const listaMusic = listMusic.map((music) => (
             <p className="text-xs text-[#b5b5b5]">{music.artist} • {music.duration} • {music.reproductions}</p>
         </div>
         <div>
-            <button type="button"><img src={more} className="w-5" alt="" /></button>
+            <button type="button"><Image src={more} width={20} height={20} className="w-5" alt="" /></button>
         </div>
     </a>
 ));
@@ -83,15 +86,15 @@ export default function tim2015(){
                     <div className="flex flex-col justify-center text-center items-center">
                         <div className="w-full bg-gradient-to-b from-[#ffffff02] to-[#000000] backdrop-blur-md ">
                             <div className="flex justify-between w-full pt-3 px-3">
-                                <img src={flecha} className="w-5 h-5" alt="" />
-                                <img src={lupa} className="w-5 h-5"  alt="" />
+                                <Image src={flecha} width={20} height={20} className="w-5 h-5" alt="" />
+                                <Image src={lupa} width={20} height={20} className="w-5 h-5"  alt="" />
                             </div>
                             <div className="leading-7">
-                                <h3 className="gap-2 flex justify-center items-center"><img src={perfil} className="w-6 h-6 rounded-xl flex" alt="" />Avicii</h3>
+                                <h3 className="gap-2 flex justify-center items-center"><Image src={perfil} width={20} height={20} className="w-6 h-6 rounded-xl flex" alt="" />Avicii</h3>
                                 <h3 className="text-[#b5b5b5]">Album • 2015</h3>
                             </div>
                             <div className="flex justify-center m-3 items-center">
-                                <img src={stories} className="w-60 h-60" alt="" />
+                                <Image src={stories} width={190} height={190} alt="" />
                             </div>
                         </div>
 
@@ -101,11 +104,11 @@ export default function tim2015(){
                                 <p className="text-xs text-[#b5b5b5]">Stories es el título del segundo álbum de estudio de disc jockey y productor sueco Avicii. Fue lanz<a href="" className="text-white">... Más</a></p> 
                             </div>
                             <div className="flex gap-4 m-4 justify-center items-center">
-                                <a href="" className="p-3 h-auto     bg-stone-800 rounded-full"><img src={descarga} className="w-5" alt="download" /></a>
-                                <a href="" className="p-3 bg-stone-800 rounded-full"><img src={agregar} className="w-5" alt="add" /></a>
-                                <a href="" className=""><img src={play} className="w-16" alt="play" /></a>
-                                <a href="" className="p-3 bg-stone-800 rounded-full"><img src={compartir} className="w-5" alt="share" /></a>
-                                <a href=""className="p-3 bg-stone-800 rounded-full"><img src={more} className="w-5  " alt="more" /></a>
+                                <a href="" className="p-3     bg-stone-800 rounded-full"><Image src={descarga} width={20} height={20} className="w-5" alt="download" /></a>
+                                <a href="" className="p-3 bg-stone-800 rounded-full"><Image src={agregar} width={20} height={20} className="w-5 h-5" alt="add" /></a>
+                                <a href="" className=""><Image src={play} width={20} height={20} className="w-16" alt="play" /></a>
+                                <a href="" className="p-3 bg-stone-800 rounded-full"><Image src={compartir} width={20} height={20} className="w-5" alt="share" /></a>
+                                <a href=""className="p-3 bg-stone-800 rounded-full"><Image src={more} width={20} height={20} className="w-5 h-5" alt="more" /></a>
                             </div>
                             <div>
                                 {listaMusic}

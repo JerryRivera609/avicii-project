@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const logo = '/logo.webp'
 const spotify = '/spotify.png'
 const youtube = '/youtube.png'
@@ -9,7 +11,7 @@ export default function header(){
     return(
         <header className="p-5 flex items-center justify-around bg-black">
             <div>
-                <img src={logo} className="w-20 h-auto"  alt="" />
+                <Image src={logo} width={20} height={20} className="w-20 h-auto"  alt="" />
             </div>
             <div>
                 <nav>

@@ -1,10 +1,13 @@
-const timeline = './tim.jpg'
+import { Autour_One } from 'next/font/google';
+import Image from 'next/image';
+
+const timeline = '/tim.jpg'
 
 export default function tim (){
     return(
         <section className="min-w-[80vw] h-[95vh] p-5 bg-[#020107] text-[#bbb4b4]  rounded-[25px] flex justify-around items-center text-center">
             <div>
-                <img src={timeline} className="rounded-xl w-[400px]" alt="" />
+                <Image src={timeline} width={400} height={600} className="rounded-xl w-[400px]" alt="" />
             </div>
             <div>
                 <h2 className="font-arizonia text-[8rem] leading-[7rem] mb-10">Remember Tim <br /> Berling</h2>

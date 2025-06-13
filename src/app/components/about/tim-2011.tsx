@@ -1,21 +1,21 @@
-
-import { useEffect, useRef, useState} from "react";
+import Image from 'next/image';
+import { useRef, useState} from "react";
 import { Play, Pause } from "lucide-react";
 
 
-const timeline04 = './timeline04.jpg'
+const timeline04 = '/timeline04.jpg'
 
 const songs = [
     {
         title: "Levels - Radio Edit",
         artist: "Avicii",
-        image: "./timeline05.jpg",
+        image: "/timeline05.jpg",
         audio: "/songs/Avicii-Levels.mp3",
     },
     {
         title: "Seek Bromance - Avicii Vocal Edit",
         artist: "Tim Berg, Avicii",
-        image: "./timeline06.webp",
+        image: "/timeline06.webp",
         audio: "/songs/TimBerg-seekBromance.mp3",
     },
 
@@ -42,7 +42,7 @@ export default function tim2011 (){
     return(
         <section className="min-w-[80vw] h-[95vh] p-5 bg-[#544417] rounded-xl flex justify-center items-center gap-5">
             <div className="w-1/3">
-                <img src={timeline04} className="rounded-xl w-[800px]" alt="" />
+                <Image src={timeline04} width={400} height={700} className="rounded-xl w-[800px]" alt="" />
             </div>
             <div className="flex flex-col w-2/3 justify-center items-center">
                 <div>
@@ -56,7 +56,7 @@ export default function tim2011 (){
                         className="relative flex flex-col p-5 rounded-xl w-[35%] transition-all duration-300 hover:bg-[#323232] text-center group"
                         >
                             <div className="relative">
-                                <img src={song.image} className="rounded-xl w-full" alt={song.title} />
+                                <Image src={song.image} width={300} height={300} className="rounded-xl w-full" alt={song.title} />
                                 <button
                                 onClick={() => handlePlayPause(index)}
                                 className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 rounded-xl"
