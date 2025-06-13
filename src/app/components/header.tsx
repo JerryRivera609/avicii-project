@@ -6,7 +6,7 @@ const youtube = '/youtube.png'
 const apple = '/apple.png'
 
 
-export default function header(){
+export default function Header(){
 
     return(
         <header className="p-5 flex items-center justify-around bg-black">
@@ -26,16 +26,16 @@ export default function header(){
             </div>
             <div className="flex gap-5">
                 <div className="w-7">
-                    <img src={spotify} alt="" />
+                    <Image src={spotify} width={30} height={20} alt="" />
                 </div>
                 <div>
                     <div className="w-7">
-                        <img src={youtube} alt="" />
+                        <Image src={youtube} width={30} height={20} alt="" />
                     </div>
                 </div>
                 <div>
                     <div className="w-7">
-                        <img src={apple} alt="" />
+                        <Image src={apple} width={30} height={20} alt="" />
                     </div>
                 </div>
             </div>

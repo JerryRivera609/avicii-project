@@ -1,12 +1,5 @@
 'use client';
-
-import { useEffect, useState, FormEvent } from "react";
-
-interface Comment {
-    nickname: string;
-    message: string;
-    createdAt: Date;
-}
+import React from 'react';
 
 export default function CommentSection() {
 

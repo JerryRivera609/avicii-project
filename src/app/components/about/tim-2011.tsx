@@ -3,7 +3,7 @@ import { useRef, useState} from "react";
 import { Play, Pause } from "lucide-react";
 
 
-const timeline04 = '/timeline04.jpg'
+const timeline04 = "/timeline04.jpg"
 
 const songs = [
     {
@@ -21,7 +21,7 @@ const songs = [
 
 ];
 
-export default function tim2011 (){
+export default function Tim2011 (){
 
     const [playingIndex, setPlayingIndex] = useState<number | null>(null);
     const audioRefs = useRef<HTMLAudioElement[]>([]);
@@ -47,7 +47,9 @@ export default function tim2011 (){
             <div className="flex flex-col w-2/3 justify-center items-center">
                 <div>
                     <h2 className="font-arizonia text-[5rem] text-center">Tim - 2011</h2>
-                    <p className="font-lato text-center mb-3 text-[1.2rem]">In 2011, Avicii established himself as one of the biggest promises in electronic music. His track 'Levels' revolutionized the industry and became an EDM anthem. That same year, his performance at Tomorrowland left a lasting mark, marking the beginning of a golden era in his career.</p>
+                    <p className="font-lato text-center mb-3 text-[1.2rem]">
+                        In 2011, Avicii established himself as one of the biggest promises in electronic music. His track &lsquo;Levels&rsquo; revolutionized the industry and became an EDM anthem. That same year, his performance at Tomorrowland left a lasting mark, marking the beginning of a golden era in his career.
+                    </p>
                 </div>
                 <div className="flex gap-5 justify-around items-start">
                     {songs.map((song, index) => (

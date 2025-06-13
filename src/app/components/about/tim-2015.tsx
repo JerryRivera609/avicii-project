@@ -72,7 +72,7 @@ const listaMusic = listMusic.map((music) => (
     </a>
 ));
 
-export default function tim2015(){
+export default function Tim2015(){
 
     
     return(

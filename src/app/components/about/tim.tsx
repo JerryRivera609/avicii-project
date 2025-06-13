@@ -1,9 +1,8 @@
-import { Autour_One } from 'next/font/google';
 import Image from 'next/image';
 
 const timeline = '/tim.jpg'
 
-export default function tim (){
+export default function Tim (){
     return(
         <section className="min-w-[80vw] h-[95vh] p-5 bg-[#020107] text-[#bbb4b4]  rounded-[25px] flex justify-around items-center text-center">
             <div>

@@ -4,7 +4,7 @@ const timeline01 = '/timeline01.jpg'
 const timeline02 = '/timeline02.jpg'
 const timeline03 = '/timeline03.jpg'
 
-export default function tim1989 (){
+export default function Tim1989 (){
     return(
         <section className="min-w-[80vw] h-[95vh] p-5 bg-[#bebebe] rounded-[25px] items-center justify-center flex flex-col-reverse gap-4">
             <div className="gap-10 flex justify-center">

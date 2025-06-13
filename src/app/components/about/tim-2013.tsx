@@ -22,7 +22,7 @@ const wakeMeUp = "/songs/Avicii-WakeMeUp.mp3"
 const timPerfil = '/tim-perfil.jpg'
 const trueAlbum = '/true-album.png'
 
-export default function tim2015(){
+export default function Tim2015(){
 
     const [playingIndex, setPlayingIndex] = useState<number | null>(null);
     const audioRefs = useRef<HTMLAudioElement[]>([]);
@@ -44,7 +44,7 @@ export default function tim2015(){
         <section className="min-w-[80vw] h-[95vh] p-7 bg-[url('/section3.jpg')] bg-cover flex bg-center rounded-[25px]">
             <div className="w-1/2 flex flex-col items-center justify-center h-full">
                 <h2 className="font-arizonia text-[5rem]">Tim - 2013</h2>
-                <p className="text-2xl">2013 was a pivotal year in Avicii's career. With the release of <span className="font-bold">Wake Me Up</span>, he fused electronic music with folk, creating an innovative sound that broke barriers. The song became a global hit, topping charts in over 20 countries and redefining EDM. Additionally, his album True showcased his musical versatility, cementing him as one of the most influential artists of the decade.</p>
+                <p className="text-2xl">2013 was a pivotal year in Avici&apos;s career. With the release of <span className="font-bold">Wake Me Up</span>, he fused electronic music with folk, creating an innovative sound that broke barriers. The song became a global hit, topping charts in over 20 countries and redefining EDM. Additionally, his album True showcased his musical versatility, cementing him as one of the most influential artists of the decade.</p>
                 <p className="text-[1.5rem]">◢◤</p>
             </div>
             <div className="w-1/2 flex flex-col items-center justify-center h-full">
