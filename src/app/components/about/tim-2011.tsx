@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useRef, useState} from "react";
+import { useRef, useState } from "react";
 import { Play, Pause } from "lucide-react";
 
 
@@ -21,7 +21,7 @@ const songs = [
 
 ];
 
-export default function Tim2011 (){
+export default function Tim2011() {
 
     const [playingIndex, setPlayingIndex] = useState<number | null>(null);
     const audioRefs = useRef<HTMLAudioElement[]>([]);
@@ -39,7 +39,7 @@ export default function Tim2011 (){
         }
     };
 
-    return(
+    return (
         <section className="min-w-[80vw] h-[95vh] p-5 bg-[#544417] rounded-xl flex justify-center items-center gap-5">
             <div className="w-1/3">
                 <Image src={timeline04} width={400} height={700} className="rounded-xl w-[800px]" alt="" />
@@ -54,14 +54,14 @@ export default function Tim2011 (){
                 <div className="flex gap-5 justify-around items-start">
                     {songs.map((song, index) => (
                         <div
-                        key={index}
-                        className="relative flex flex-col p-5 rounded-xl w-[35%] transition-all duration-300 hover:bg-[#323232] text-center group"
+                            key={index}
+                            className="relative flex flex-col p-5 rounded-xl w-[35%] transition-all duration-300 hover:bg-[#323232] text-center group"
                         >
                             <div className="relative">
                                 <Image src={song.image} width={300} height={300} className="rounded-xl w-full" alt={song.title} />
                                 <button
-                                onClick={() => handlePlayPause(index)}
-                                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 rounded-xl"
+                                    onClick={() => handlePlayPause(index)}
+                                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 rounded-xl"
                                 >
                                     {playingIndex === index ? <Pause size={50} color="#1DB954" /> : <Play size={50} color="#1DB954" />}
                                 </button>
@@ -70,7 +70,12 @@ export default function Tim2011 (){
                             <p className="text-[#ffffff]">
                                 <span className="text-[#b1b1b1]">Song -</span> {song.artist}
                             </p>
-                            <audio ref={(el) => (audioRefs.current[index] = el!)} src={song.audio} />
+                            <audio
+                                ref={(el) => {
+                                    audioRefs.current[index] = el!;
+                                }}
+                                src={song.audio}
+                            />
                         </div>
                     ))}
                 </div>
