@@ -74,9 +74,9 @@ export default function tim2015(){
     
     return(
         <section className="min-w-[80vw] h-[95vh] p-7 bg-[url('/section4.png')] bg-cover flex bg-center rounded-[25px]">
-            <div className="w-4/6">
+            <div className="w-4/6 p-3">
                 <h2 className="font-arizonia text-[5rem]">Tim - 2015</h2>
-                <p>In 2015, Avicii released Stories, his second studio album, showcasing a more diverse and personal sound that blended EDM with pop, rock, and country influences. The album featured hit songs like Waiting for Love, The Nights, and Broken Arrows, collaborating with artists such as Chris Martin, Zac Brown Band, and Martin Garrix. Stories received critical acclaim for its innovation and emotional depth, further solidifying Avicii’s status as a pioneer in electronic music. However, during this period, he also faced serious health issues due to his relentless work schedule, leading him to announce his retirement from touring the following year.</p>
+                <p className="text-2xl">In 2015, Avicii released Stories, his second studio album, showcasing a more diverse and personal sound that blended EDM with pop, rock, and country influences. The album featured hit songs like Waiting for Love, The Nights, and Broken Arrows, collaborating with artists such as Chris Martin, Zac Brown Band, and Martin Garrix. Stories received critical acclaim for its innovation and emotional depth, further solidifying Avicii’s status as a pioneer in electronic music. However, during this period, he also faced serious health issues due to his relentless work schedule, leading him to announce his retirement from touring the following year.</p>
             </div>
             <div className="w-2/6">
                 <div className=" rounded-xl max-h-full overflow-x-auto custom-scroll">
@@ -94,6 +94,7 @@ export default function tim2015(){
                                 <img src={stories} className="w-60 h-60" alt="" />
                             </div>
                         </div>
+
                         <div className="bg-black">
                             <div>
                                 <h2 className="text-3xl font-bold">Stories</h2>
