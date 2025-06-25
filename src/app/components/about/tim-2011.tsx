@@ -16,7 +16,7 @@ const songs = [
         title: "Seek Bromance - Avicii Vocal Edit",
         artist: "Tim Berg, Avicii",
         image: "/timeline06.webp",
-        audio: "/songs/TimBerg-seekBromance.mp3",
+        audio: "/songs/TimBerg-SeekBromance.mp3",
     },
 
 ];
